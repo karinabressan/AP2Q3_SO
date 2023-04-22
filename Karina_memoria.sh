@@ -52,7 +52,13 @@ memoriaProcessosUsuario="`ps aux | egrep ^$usario | awk 'BEGIN{total=0}; \
     {total += $4};END{print total}'`"
 
 # j) Quantidade de page-faults do sistema.
-pageFaults=1
+
+# page faults por PID = $(ps -o min_flt,maj_flt 1)
+# major faults:
+majorFaults=$(ps -o min_flt,maj_flt 1 | awk 'NR==2{print $1}')
+# minor faults:
+minorFaults=$(ps -o min_flt,maj_flt 1 | awk 'NR==2{print $2}')
+pageFaults=$(($majorFaults+$minorFaults))
 
 # Criando o arquivo .csv com as respectivas variáveis de cada item
 informacoes=$hoje","$usuario","$host","$capacidadeMemoriaInstalada","$memoriaEmUso","$swapTotal","$swapEmUso","$processosAtivosUser","$memoriaProcessosUsuario","$pageFaults
@@ -69,5 +75,4 @@ else
 fi
 
 # Sessão de testes
-echo "cabeçalho: $cabecalho"
 echo "nome do arquivo: $nomeArquivo"

@@ -1,3 +1,2 @@
 Data (YYYYMMDD),Usuário corrente,Nome do host,Capacidade total da memória principal disponível/instalada no computador,Quantidade total de memória principal em uso (todos os usuários),Capacidade total de memória swap,Quantidade total de memória swap em uso,Número total de processos do usuário corrente,Quantidade total de memória ocupada pelos processos do usuário corrente,Quantidade de page-faults do sistema
-20230422,karina,NG0500,12863992,367728,4194304,0,17,3.3,1
-20230422,karina,NG0500,12863992,301188,4194304,0,17,2.9,83
+20230422,root,NG0500,12863992,307776,4194304,0,10,2.9,83

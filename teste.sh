@@ -43,12 +43,19 @@ memoriaProcessosUsuario="`ps aux | egrep ^$usario | awk 'BEGIN{total=0}; \
     {total += $4};END{print total}'`"
 
 # j) Quantidade de page-faults do sistema.
-/usr/bin/time /bin/true
+# /usr/bin/time /bin/true --> não consegui pegar somente a info do sistema.
+# $ perf stat make --> não consegui instalar o package perf
+
+# page faults por PID = $(ps -o min_flt,maj_flt 1)
+# major faults:
+majorFaults=$(ps -o min_flt,maj_flt 1 | awk 'NR==2{print $1}')
+# minor faults:
+minorFaults=$(ps -o min_flt,maj_flt 1 | awk 'NR==2{print $2}')
+pageFaults=$(($majorFaults+$minorFaults))
+
+# /3 /5 * * * * sh teste.sh
 
 # Sessão de testes
-echo "capacidadeMemoriaInstalada: $capacidadeMemoriaInstalada"
-echo "memoria em uso: $memoriaEmUso"
-echo "swap total: $swapTotal"
-echo "swap em uso: $swapEmUso"
-echo "processos ativos user: $processosAtivosUser"
-echo "memoria processos ativos user: $memoriaProcessosUsuario"
+
+echo "page faults: $pageFaults"
+echo "$a"

@@ -67,5 +67,5 @@ Tarefas:
 [x] - Quantidade total de memória swap em uso.
 [x] - Número total de processos do usuário corrente.
 [x] - Quantidade total de memória ocupada pelos processos do usuário corrente.
-[] - Quantidade de page-faults do sistema.
+[x] - Quantidade de page-faults do sistema.
 [] - Fazer um loop para executar memoria.sh a cada 20 s em um intervalo de 5 min.
