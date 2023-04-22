@@ -48,17 +48,18 @@ swapEmUso=$(free -k | awk 'NR==3{print $3}')
 processosAtivosUser=$(ps -f -u $usuario | wc -l)
 
 # i) Quantidade total de memória ocupada pelos processos do usuário corrente.
-memoriaProcessosUsuario="`ps aux | egrep ^$usario | awk 'BEGIN{total=0}; \
+memoriaProcessosUsuario="`ps aux | grep ^$usuario | awk 'BEGIN{total=0}; \
     {total += $4};END{print total}'`"
 
 # j) Quantidade de page-faults do sistema.
 
-# page faults por PID = $(ps -o min_flt,maj_flt 1)
+# page faults por PID = $(ps -eo min_flt,maj_flt 1)
 # major faults:
-majorFaults=$(ps -o min_flt,maj_flt 1 | awk 'NR==2{print $1}')
+majorFaults=$(ps -eo maj_flt | awk 'BEGIN{total=0}; {total += $1};END{print total}')
 # minor faults:
-minorFaults=$(ps -o min_flt,maj_flt 1 | awk 'NR==2{print $2}')
+minorFaults=$(ps -eo min_flt | awk 'BEGIN{total=0}; {total += $1};END{print total}')
 pageFaults=$(($majorFaults+$minorFaults))
+
 
 # Criando o arquivo .csv com as respectivas variáveis de cada item
 informacoes=$hoje","$usuario","$host","$capacidadeMemoriaInstalada","$memoriaEmUso","$swapTotal","$swapEmUso","$processosAtivosUser","$memoriaProcessosUsuario","$pageFaults
