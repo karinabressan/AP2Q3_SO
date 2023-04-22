@@ -54,12 +54,12 @@ Tarefas:
 [x] - Verificar se o usuario recebido como argumento existe 
 [x] - Obter o usuario corrente. 
 [x] - Utilizar o usuario corrente caso não seja informado um usuario por argumento ou o usuario do argumento nao existir 
-[] - Criar arquivo 
+[x] - Criar arquivo 
 [x] - Criar arquivo com padrão de nome <<primeironome1>_<primeironome2>_<YYYYMMDD>_memoria_<usuário corrente>.csv 
 [x] - Ao criar o arquivo, escrever o cabeçalho de acordo com a obs 3 
-[] - Verificar se um arquivo com um determinado nome ja existe 
-[] - Caso o arquivo exista, escrever no final adicionando uma linha 
-[] - Escrever no arquivo com o formato da Obs. 1. 
+[x] - Verificar se um arquivo com um determinado nome ja existe 
+[x] - Caso o arquivo exista, escrever no final adicionando uma linha 
+[x] - Escrever no arquivo com o formato da Obs. 1. 
 [x] - Obter o nome do host.
 [x] - Capacidade total da memória principal disponível/instalada no computador. 
 [x] - Quantidade total de memória principal em uso (todos os usuários).

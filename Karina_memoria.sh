@@ -52,6 +52,21 @@ memoriaProcessosUsuario="`ps aux | egrep ^$usario | awk 'BEGIN{total=0}; \
     {total += $4};END{print total}'`"
 
 # j) Quantidade de page-faults do sistema.
+pageFaults=1
+
+# Criando o arquivo .csv com as respectivas variáveis de cada item
+informacoes=$hoje","$usuario","$host","$capacidadeMemoriaInstalada","$memoriaEmUso","$swapTotal","$swapEmUso","$processosAtivosUser","$memoriaProcessosUsuario","$pageFaults
+
+# Se o arquivo para o usuário e data já existe...
+if test -e $nomeArquivo; then
+# ...adiciona nova linha
+    echo $informacoes >> $nomeArquivo
+# Se o arquivo não existe, será criado com as informações da primeira execução:    
+else
+    # Criando o arquivo 
+    echo "$cabecalho">$nomeArquivo
+    echo $informacoes >> $nomeArquivo
+fi
 
 # Sessão de testes
 echo "cabeçalho: $cabecalho"

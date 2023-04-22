@@ -43,6 +43,7 @@ memoriaProcessosUsuario="`ps aux | egrep ^$usario | awk 'BEGIN{total=0}; \
     {total += $4};END{print total}'`"
 
 # j) Quantidade de page-faults do sistema.
+/usr/bin/time /bin/true
 
 # Sessão de testes
 echo "capacidadeMemoriaInstalada: $capacidadeMemoriaInstalada"
