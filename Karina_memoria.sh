@@ -2,17 +2,9 @@
 
 # Aluna: Karina Bressan Felicetti
 
-usuarioArgumento=$1
+coletaDadosMemoria() {
 # $USER obtém o usuario atual
-usuarioAtual=$USER
-
-# Se o usuário do argumento existe, será utilizado (item b).
-if id -u "$usuarioArgumento" > /dev/null 2>&1; then
-        usuario=$usuarioArgumento
-# Se o usuário do argumento não existir ou não for informado, será utilizado o usuário atual.
-else
-        usuario=$usuarioAtual
-fi
+usuario=$USER
 
 # Variável para guardar a informação da data atual (item a)
 hoje=$(date +"%Y%m%d")
@@ -75,5 +67,12 @@ else
     echo $informacoes >> $nomeArquivo
 fi
 
-# Sessão de testes
-echo "nome do arquivo: $nomeArquivo"
+}
+# Executando o programa por 5 min esperando 20 s a cada execução, resultando num total de 15 execuções.
+runs=0;
+while [ $runs -lt 15 ]:
+do
+    coletaDadosMemoria
+    sleep 20
+    runs=$(($runs+1))
+done

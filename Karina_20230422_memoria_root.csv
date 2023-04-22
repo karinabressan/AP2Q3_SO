@@ -1,4 +1,0 @@
-Data (YYYYMMDD),Usuário corrente,Nome do host,Capacidade total da memória principal disponível/instalada no computador,Quantidade total de memória principal em uso (todos os usuários),Capacidade total de memória swap,Quantidade total de memória swap em uso,Número total de processos do usuário corrente,Quantidade total de memória ocupada pelos processos do usuário corrente,Quantidade de page-faults do sistema
-20230422,root,NG0500,12863992,320996,4194304,0,10,3.1,83
-20230422,root,NG0500,12863992,323136,4194304,0,10,0,83
-20230422,root,NG0500,12863992,336164,4194304,0,10,0,1135643
