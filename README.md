@@ -50,17 +50,17 @@ Tarefas:
 [x] - Criar repositorio no github para o trabalho 
 [x] - Fazer clone do repositorio 
 [x] - Criar um SH com o nome Karina_memoria.sh 
-[] - Receber como argumento o nome do usuário. 
-[] - Verificar se o usuario recebido como argumento existe 
-[] - Obter o usuario corrente. 
-[] - Utilizar o usuario corrente caso não seja informado um usuario por argumento ou o usuario do argumento nao existir 
+[x] - Receber como argumento o nome do usuário. 
+[x] - Verificar se o usuario recebido como argumento existe 
+[x] - Obter o usuario corrente. 
+[x] - Utilizar o usuario corrente caso não seja informado um usuario por argumento ou o usuario do argumento nao existir 
 [] - Criar arquivo 
-[] - Criar arquivo com padrão de nome memoria<usuário>.csv 
-[] - Ao criar o arquivo, escrever o cabeçalho de acordo com a obs 3 
+[x] - Criar arquivo com padrão de nome <<primeironome1>_<primeironome2>_<YYYYMMDD>_memoria_<usuário corrente>.csv 
+[x] - Ao criar o arquivo, escrever o cabeçalho de acordo com a obs 3 
 [] - Verificar se um arquivo com um determinado nome ja existe 
 [] - Caso o arquivo exista, escrever no final adicionando uma linha 
 [] - Escrever no arquivo com o formato da Obs. 1. 
-[] - Obter o nome do host.
+[x] - Obter o nome do host.
 [] - Capacidade total da memória principal disponível/instalada no computador. 
 [] - Quantidade total de memória principal em uso (todos os usuários).
 [] - Capacidade total de memória swap.

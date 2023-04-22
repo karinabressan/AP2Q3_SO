@@ -22,11 +22,13 @@ nomeArquivo="Karina_"$hoje"_memoria_"$usuario".csv"
 cabecalho="Data (YYYYMMDD),Usuário corrente,Nome do host,Capacidade total da memória principal disponível/instalada no computador,Quantidade total de memória principal em uso (todos os usuários),Capacidade total de memória swap,Quantidade total de memória swap em uso,Número total de processos do usuário corrente,Quantidade total de memória ocupada pelos processos do usuário corrente,Quantidade de page-faults do sistema"
 
 # a) Data (YYYYMMDD)
+# $hoje
 
 # b) Usuário corrente
+# $usuario
 
 # c) Nome do host
-
+host=$(hostname)
 # d) Capacidade total da memória principal disponível/instalada no computador
 
 # e) Quantidade total de memória principal em uso (todos os usuários)
