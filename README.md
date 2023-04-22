@@ -61,11 +61,11 @@ Tarefas:
 [] - Caso o arquivo exista, escrever no final adicionando uma linha 
 [] - Escrever no arquivo com o formato da Obs. 1. 
 [x] - Obter o nome do host.
-[] - Capacidade total da memória principal disponível/instalada no computador. 
-[] - Quantidade total de memória principal em uso (todos os usuários).
-[] - Capacidade total de memória swap.
-[] - Quantidade total de memória swap em uso.
-[] - Número total de processos do usuário corrente.
-[] - Quantidade total de memória ocupada pelos processos do usuário corrente.
+[x] - Capacidade total da memória principal disponível/instalada no computador. 
+[x] - Quantidade total de memória principal em uso (todos os usuários).
+[x] - Capacidade total de memória swap.
+[x] - Quantidade total de memória swap em uso.
+[x] - Número total de processos do usuário corrente.
+[x] - Quantidade total de memória ocupada pelos processos do usuário corrente.
 [] - Quantidade de page-faults do sistema.
 [] - Fazer um loop para executar memoria.sh a cada 20 s em um intervalo de 5 min.
